@@ -1,0 +1,143 @@
+/*
+    Author: Ajala AbdulSamii Olalekan
+    Email: kgasta@gmail.com
+    Github: github.com/jalasem
+    Note: I have written some custom css here to help you through your design
+*/
+
+nav>.container {
+    width: 95%;
+}
+
+/*font size adjustments
+    in your html you can use them for icons and text
+    e.g <i class="icon ion-social-facebook x15"></i> to adjut the font-size of the icon to 1.5rem
+*/
+.x1 {
+    font-size: 1rem;
+}
+.x15 {
+    font-size: 1.5rem;
+}
+.x2 {
+    font-size: 2rem;
+}
+.x25 {
+    font-size: 2.5rem;
+}
+.x3 {
+    font-size: 3rem;
+}
+.x35 {
+    font-size: 3.5rem;
+}
+.x4 {
+    font-size: 4rem;
+}
+.x45 {
+    font-size: 4.5rem;
+}
+.x5 {
+    font-size: 5rem;
+}
+.x55 {
+    font-size: 5.5rem;
+}
+
+ul.social i.icon {
+    margin-right: 1rem;
+}
+
+.view {
+    position: fixed;
+    left: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    z-index: 1000;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#auth-view .view.welcome {
+    background-color: #23b;
+    background: linear-gradient( purple, #275B84);
+}
+#auth-view .view.login_signup {
+    background-color: #23b;
+    background: linear-gradient( green, #275B84);
+}
+#auth-view .view.signup {
+    background-color: #23b;
+    background: linear-gradient( #F47C7C, #F7F48B);
+}
+
+#auth-view .card-panel {
+    max-width: 30rem;
+}
+
+.col.s12 > input.input-field {
+    font-size: 1.5rem;
+}
+
+#main-view > aside {
+    width: 7rem;
+    height: 100vh;
+    background: #9c27b0;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 49px;
+}
+
+#main-view > aside li {
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#main-view > aside li:hover {
+    background: rgba(158, 158, 158, 0.32);
+}
+
+#main-view > aside li > i.icon {
+    font-size: 2rem;
+}
+
+#main-view > main {
+    width: calc(100% - 7rem);
+    height: calc(100vh - 64px);
+    background: blue;
+    float: right;
+}
+
+#main-view > main > .row > .col.s12 {
+    padding: 0;
+}
+
+.tabs.tabs-fixed-width, .tabs {
+    overflow-x: hidden;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

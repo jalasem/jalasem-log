@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jalasem Trainee&rsquo;s Log</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="auth-view">
+        <div class="view welcome">
+            <div class="ibndigo-text card-panel center">
+                <h4>Jalasem Trainee&rsquo;s Log</h4>
+                <p class="flow-text red-text"><small>Please note that trainees's are required to fill this log everyday</small></p>
+                <button class="btn-large waves-effect waves-light enter">Agree and Enter</button>
+            </div>
+        </div>
+        <div class="view login_signup hide blue-grey-text text-darken-4">
+            <div class="card-panel center">
+                <h4>Jalasem Trainee&rsquo;s Log</h4>
+                <p class="center">If you have problem signing into this log, Contact me via email: kgasta@gmail.com</p>
+                <button class="signInWithGithub btn-large blue-grey darken-3 waves-effect waves-light">
+                    <i class="icon ion-social-github-outline"></i>
+                    Login with Github
+                </button>
+                <button class="signup btn-large green darken-2 waves-effect waves-light">
+                    <i class="icon ion-bookmark"></i>
+                    Sign up
+                </button>
+            </div>
+        </div>
+        <div class="view signup hide">
+            <div class="card-panel center">
+                <h4>Jalasem Trainee&rsquo;s Log</h4>
+                <p class="center">After registration, failure to log your activities after <br>3-Consecutive days or 7-Days in a Month attracts a penalty</p>
+                <button class="signInWithGithub btn-large blue-grey darken-3 waves-effect waves-light" style="margin-bottom: 1rem;">
+                    <i class="icon ion-social-github-outline"></i>
+                    Agree and SignUp with Github
+                </button>
+                <button class="swap2signIn btn-large green darken-2 waves-effect waves-light">
+                    <i class="icon ion-bookmark"></i>
+                    Sign in
+                </button>
+            </div>
+        </div>
+        <div class="view hide"></div>
+        <div class="view hide"></div>
+    </div>
+    <div id="main-view" class="hide">
+        <header>
+            <div class="navbar-fixed">
+                <nav class="purple">
+                    <div class="nav-wrapper container">
+                        <a href="#!" class="brand-logo left">
+                            <span class="hide-on-small-only">Jalasem Trainees Log</span>
+                            <span class="hide-on-med-and-up">Jalasem Log</span>
+                        </a>
+                        <ul class="right">
+                            <li><a href="#!" class="btn pink accent-3 doLogout waves-effect waves-light">Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <aside>
+            <ul class="x1">
+                <li>
+                    <i class="icon ion-clipboard"></i>
+                    <br> Log
+                </li>
+                <li>
+                    <i class="icon ion-ios-list-outline"></i>
+                    <br> Task
+                </li>
+                <li>
+                    <i class="icon ion-email"></i><br> Messages
+                </li>
+                <li>
+                    <i class="icon ion-person"></i><br> Profile
+                </li>
+            </ul>
+        </aside>
+        <main class="blue-grey lighten-5">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab col s3"><a class="active" href="#log">Log</a></li>
+                        <li class="tab col s3"><a href="#logs">Logs</a></li>
+                    </ul>
+                </div>
+                <div id="log" class="col s12">
+                    <div class="container">
+                        <form class="row card-panel" id="newLogForm">
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6 center-align">
+                                    <input id="fccUsername_input" type="text" class="center-align input-field validate" placeholder="fcc username" required>
+                                    <label for="fccUsername_input">FCC Username <sup class="red-text">*</sup></label>
+                                </div>
+                                <div class="input-field col s12 m6 center-align">
+                                    <input id="browniePoint_input" type="number" class="center-align inline validate" placeholder="e.g 138" required>
+                                    <label for="browniePoint_input">FCC Brownie Points <sup class="red-text">*</sup></label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="daily_summary_input" type="text" placeholder="what did you do today?" class="validate" required>
+                                    <label for="daily_summary_input">Daily Summary <sup class="red-text">*</sup></label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="question_input_onLog" type="text" placeholder="Do you have any question? Leave empty if no question" class="validate">
+                                    <label for="question_input_onLog">Question</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="challenges_input_onLog" type="text" placeholder="What problem did you face today? Leave empty if no challenges" class="validate">
+                                    <label for="challenges_input_onLog">Challenges</label>
+                                    <p class="center">
+                                        <button class="btn indigo" type="submit">Submit</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="logs" class="col s12">
+                    <h1>Logs</h1>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
