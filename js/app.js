@@ -11,7 +11,7 @@ var auth = firebase.auth(),
   database = firebase.database(),
   storage = firebase.storage();
 
-var rootRef = database.ref('jtl'),
+var rootRef = database.ref('jalasem-log'),
   questionsRef = rootRef.child('questions'), challengesRef = rootRef.child('challenges');
 
 function signInWithGithub() {
@@ -96,14 +96,18 @@ function submitLog() {
                       browniePoints: browniePoints
                     }
                   }).then(function () {
-                    $('#browniePoint_input').val('');
-                    $('#daily_summary_input').val('');
-                    $('#question_input_onLog').val('');
-                    $('#challenges_input_onLog').val('');
-
-                    Materialize.toast('Today\'s log have been successfully updated!', 5000);
-                  }).catch(function (error) {
-                    Materialize.toast(error.message, 6500);
+                    if(challenges && challenges.length > 2) {
+                      challengesRef.push({
+                        challenge: challenges,
+                        need2attend2: {
+                          name: name,
+                          email: email,
+                          browniePoints: browniePoints
+                        }
+                      })
+                    }
+                  }).catch(function(error){
+                    Materialize.toast(error.message, 7000);
                   });
                 } else {
                   Materialize.toast('Today\'s log have been successfully updated', 5000);
@@ -135,6 +139,8 @@ auth.onAuthStateChanged(function (user) {
     console.log(user);
     $('#auth-view, .view').addClass('hide');
     $('#main-view').removeClass('hide');
+    $('main .view').addClass('hide');
+    $('#main-view .log-view').removeClass('hide');
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;

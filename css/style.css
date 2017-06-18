@@ -48,7 +48,7 @@ ul.social i.icon {
     margin-right: 1rem;
 }
 
-.view {
+#auth-view .view {
     position: fixed;
     left: 0;
     right:0;
@@ -124,8 +124,7 @@ ul.social i.icon {
     float: right;
 }
 
-#main-view > main > .row > .col.s12 {
-    padding: 0;
+#main-view main > .row.view {
 }
 
 .tabs.tabs-fixed-width, .tabs {
